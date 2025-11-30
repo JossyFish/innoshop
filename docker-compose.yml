@@ -1,0 +1,63 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - userservice
+      - productservice
+
+  userservice:
+    build: 
+      context: . 
+      dockerfile: ./backend/UserService/UserService.API/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development  
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__UserDBContext=Host=host.docker.internal;Port=5432;Database=UserDB;Username=postgres;Password=1111
+      - ConnectionStrings__Redis=redis:6379
+      - RabbitMQ__Host=rabbitmq
+      - RabbitMQ__Username=guest
+      - RabbitMQ__Password=guest
+    depends_on:
+      - rabbitmq
+
+  productservice:
+    build: 
+      context: . 
+      dockerfile: ./backend/ProductService/ProductService.API/Dockerfile
+    ports:
+      - "5001:8080"  
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development 
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__ProductDBContext=Host=host.docker.internal;Port=5432;Database=ProductDB;Username=postgres;Password=1111
+      - RabbitMQ__Host=rabbitmq
+      - RabbitMQ__Username=guest
+      - RabbitMQ__Password=guest
+    depends_on:
+      - rabbitmq
+
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"  
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_port_connectivity"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"

@@ -1,0 +1,18 @@
+{
+  "JwtOptions": {
+    "SecretKey": "12345678912345678912345678912345",
+    "ExpitesHours": "12"
+  },
+  "AuthorizationOptions": {
+    "RolePermissions": [
+      {
+        "Role": "Admin",
+        "Permissions": [ "Create", "Read", "Update", "Delete" ]
+      },
+      {
+        "Role": "User",
+        "Permissions": [ "Create", "Read", "Update" ]
+      }
+    ]
+  }
+}
