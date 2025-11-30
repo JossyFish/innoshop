@@ -1,0 +1,46 @@
+
+.product{
+    border: 0.1vw solid #e0e0e0;
+    border-radius: 1vw;
+    padding: 1vw;
+    margin: 1vw 0;
+    background: white;
+    box-shadow: 0 0.2vw 0.7vw rgba(0,0,0,0.1);
+    width: 15vw;
+    transition: box-shadow 0.2s; 
+}
+
+.product:hover {
+    box-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.2); 
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 3vw;
+}
+
+.name{
+    font-size: 1.5vw;
+    font-weight: 600;
+    margin: 0%;
+    color: #556ae3;
+}
+
+.isActive{
+    color: #c62828;
+    margin: 0%;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 0.3vw;
+}
+
+.quantity{
+    color: #666;
+    font-size: 0.8vw;
+}

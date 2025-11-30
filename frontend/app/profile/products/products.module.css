@@ -1,0 +1,166 @@
+.container {
+    min-height: 100vh;
+    background: #ffffff;
+    width: 100%;
+    border-radius: 2vw;
+    margin-bottom: 2vw;
+}
+
+.controlPanel {
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 1vw;
+}
+
+.controlGroup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.actionGroup {
+    display: flex;
+    gap: 12px;
+}
+
+.controlButton {
+    padding: 8px 16px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.controlButton:hover {
+    background: #e2e8f0;
+}
+
+.controlButton.active {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+.selectionInfo {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.actionButton, .warningButton, .dangerButton {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.actionButton {
+    background: #10b981;
+    color: white;
+}
+
+.actionButton:hover:not(:disabled) {
+    background: #059669;
+}
+
+.warningButton {
+    background: #f59e0b;
+    color: white;
+}
+
+.warningButton:hover:not(:disabled) {
+    background: #d97706;
+}
+
+.dangerButton {
+    background: #ef4444;
+    color: white;
+}
+
+.dangerButton:hover:not(:disabled) {
+    background: #dc2626;
+}
+
+.actionButton:disabled, 
+.warningButton:disabled, 
+.dangerButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.content {
+    padding: 24px 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 8px 0;
+}
+
+.subtitle {
+    color: #64748b;
+    margin: 0;
+}
+
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.productWrapper {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    width: fit-content;
+    padding: 0vw 1vw;
+}
+
+.productWrapper:hover {
+    transform: translateY(-2px);
+}
+
+.productWrapper.selected {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.loadMoreTrigger {
+    height: 1px;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 60px 20px;
+    color: #64748b;
+}
+
+.emptyState p {
+    font-size: 18px;
+    margin: 0;
+}

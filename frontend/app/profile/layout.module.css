@@ -1,0 +1,13 @@
+.container {
+    min-height: 100vh;
+}
+
+.content {
+    background-color: rgb(242, 242, 242);
+    min-height: calc(100vh - 5vw); 
+    padding: 1cqmax 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10vw;
+}

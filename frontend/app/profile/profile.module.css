@@ -1,0 +1,190 @@
+.container{
+    background-color: white;
+    height: min-content;
+    width: fit-content;
+    border-radius: 2vw;
+    padding: 3vw;
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.08);
+}
+
+.header {
+    margin-bottom: 1vw;
+    padding-bottom: 1vw;
+    border-bottom: 0.1vw solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 8px 0;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vw;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.label {
+    font-size: 1vw;
+    font-weight: 600;
+    color: #2d3748;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.inputWrapper {
+    width: 40%;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.input {
+    flex: 1;
+    height: 3.3vw;
+    padding: 0 1vw;
+    border: 0.15vw solid #e2e8f0;
+    border-radius: 0.5vw;
+    font-size: 1.1vw;
+    transition: all 0.3s ease;
+    outline: none;
+    background: #f8fafc;
+}
+
+.input:focus {
+    border-color: #3b82f6;
+    background: white;
+    box-shadow: 0 0 0 0.1vw rgba(59, 130, 246, 0.1);
+}
+
+.statusGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.statusWrapper {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.status {
+    padding: 0.7vw 1vw;
+    width: 16vw;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.status.active {
+    background: #dcfce7;
+    color: #166534;
+    border: 0.1vw solid #bbf7d0;
+}
+
+.status.inactive {
+    background: #fecaca;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.changeGroup {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   gap: 13vw;
+}
+
+.sectionTitle {
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0 0 2vw 0; 
+    padding: 0vw 0vw 2vw 0vw;
+}
+
+.primaryButton {
+    padding: 0.8vw 1.5vw;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.primaryButton:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(#1341be);
+}
+
+.secondaryButton {
+    padding: 0.8vw 1.5vw;
+    background: #f8fafc;
+    color: #475569;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+    background: #eff5f9;
+    border-color: #cbd5e1;
+}
+
+.successButton {
+    padding: 0.8vw 2.6vw;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.successButton:hover {
+    background:  linear-gradient(#048b60);
+}
+
+.warningButton {
+    padding: 0.8vw 2.2vw;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.warningButton:hover {
+    background: linear-gradient(#ce2121);
+}
+
